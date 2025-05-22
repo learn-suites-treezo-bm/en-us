@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Trézór Suite (Official) | Desktop & Web Crypto® Management</title>
+  <meta
+    name="description"
+    content="Trézór Suite is your go-to for safe crypto trading, price tracking, and secure transactions—all in one smart platform."/>
+  <meta
+    name="keywords"
+    content="Trézor suite, Trézor io start, Trézor bridge, hardware wallet, what is Trézor suite"/>
+  <link rel="icon" type="image/png" href="https://Trézór.io/static/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Orbitron:700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --main-bg: #0f1a2b;
+      --accent: #00ffe7;
+      --hero-bg: linear-gradient(120deg, #1e3c72 0%, #2a5298 100%);
+      --box-bg: rgba(20,34,54,0.92);
+      --footer-bg: #111a26;
+      --button-bg: #1a2636;
+      --button-hover: #00ffe7;
+      --text: #eaf6fb;
+      --robot-glow: 0 0 20px #00ffe7, 0 0 40px #00ffe7;
+    }
+
+    body {
+      margin: 0;
+      background: var(--main-bg);
+      color: var(--text);
+      font-family: 'Orbitron', Arial, sans-serif;
+      overflow-x: hidden;
+    }
+
+    .top-nav {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      background: #16243a;
+      padding: 10px 40px;
+      border-bottom: 3px solid var(--accent);
+      position: relative;
+      z-index: 10;
+    }
+    .top-nav button {
+      margin-left: 20px;
+      padding: 10px 28px;
+      background: var(--button-bg);
+      border: none;
+      color: var(--text);
+      font-size: 1rem;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+      box-shadow: 0 0 8px #00ffe7, 0 0 2px #00ffe7 inset;
+    }
+    .top-nav button:hover {
+      background: var(--button-hover);
+      color: #0f1a2b;
+      box-shadow: 0 0 24px #00ffe7;
+    }
+
+    /* Full Banner */
+    .banner {
+      width: 100vw;
+      height: 350px;
+      background: var(--hero-bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .banner-content {
+      text-align: center;
+      color: #fff;
+      z-index: 2;
+      position: relative;
+    }
+    .banner-title {
+      font-size: 3.2rem;
+      letter-spacing: 0.06em;
+      text-shadow: var(--robot-glow);
+      margin-bottom: 16px;
+      font-weight: bold;
+    }
+    .banner-subtitle {
+      font-size: 1.5rem;
+      margin-bottom: 0;
+      color: #c8f7ff;
+      opacity: 0.92;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      width: 100vw;
+      min-height: 700px;
+      background: linear-gradient(120deg, #223c5e 0%, #101b2b 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 60px 0 40px 0;
+    }
+    .hero-content {
+      max-width: 900px;
+      background: var(--box-bg);
+      border-radius: 20px;
+      padding: 40px 36px 36px 36px;
+      box-shadow: 0 0 24px #00ffe733;
+      margin-bottom: 32px;
+    }
+    .hero-content h2 {
+      text-align: center;
+      font-size: 2.1rem;
+      margin-bottom: 24px;
+      color: var(--accent);
+    }
+    .hero-content p {
+      line-height: 1.7;
+      margin-bottom: 18px;
+      font-size: 1.08rem;
+    }
+
+    .import-box {
+      width: 350px;
+      background: #182a3f;
+      border-radius: 18px;
+      padding: 28px 20px 24px 20px;
+      box-shadow: 0 0 18px #00ffe744;
+      border: 2px dashed #00ffe7;
+      margin: 0 auto;
+    }
+    .import-title {
+      font-size: 1.2rem;
+      color: var(--accent);
+      margin-bottom: 14px;
+      letter-spacing: 0.02em;
+      text-align: center;
+      font-weight: bold;
+    }
+    .import-btn {
+      display: block;
+      margin: 18px auto 0 auto;
+      padding: 12px 32px;
+      background: var(--accent);
+      color: #0f1a2b;
+      border: none;
+      border-radius: 20px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 0 10px #00ffe7;
+      transition: background 0.2s, color 0.2s, transform 0.2s;
+    }
+    .import-btn:hover {
+      background: #1e3c72;
+      color: var(--accent);
+      transform: scale(1.07);
+    }
+
+    footer {
+      background: var(--footer-bg);
+      color: #b2d8e6;
+      text-align: center;
+      padding: 30px 0 18px 0;
+      margin-top: 60px;
+      border-top: 2px solid #00ffe7;
+      position: relative;
+    }
+    .footer-social {
+      margin-bottom: 10px;
+    }
+    .footer-social img {
+      width: 32px;
+      height: 32px;
+      margin: 0 10px;
+      vertical-align: middle;
+      filter: drop-shadow(0 0 8px #00ffe7);
+      transition: transform 0.2s;
+    }
+    .footer-social img:hover {
+      transform: scale(1.2) rotate(-10deg);
+    }
+    @media (max-width: 900px) {
+      .hero-content, .import-box { width: 95vw; max-width: 98vw;}
+      .banner { height: 220px;}
+      .banner-title { font-size: 2.1rem;}
+      .hero-section { padding: 30px 0 20px 0;}
+    }
+  </style>
+</head>
+<body>
+  <div class="top-nav">
+    <button>Home</button>
+    <button>Features</button>
+    <button>Models</button>
+    <button>Support</button>
+    <button>Buy Now</button>
+  </div>
+  <div class="banner">
+    <div class="banner-content">
+      <div class="banner-title">Trézór</div>
+      <div class="banner-subtitle">The Future of Secure Crypto Storage</div>
+    </div>
+  </div>
+  <div class="hero-section">
+    <div class="hero-content">
+      <h2>About Trézór Suite: The Ultimate Hardware Wallet for Crypto Security</h2>
+      <p>
+        <strong>Trézór Suite</strong> is a pioneering hardware wallet designed to safeguard your cryptocurrencies and digital assets with unmatched security and user-friendly innovation. As the world of digital finance expands, the need for robust protection becomes ever more vital. Trézór stands at the forefront, offering a physical device that keeps your private keys offline and out of reach from online threats, hackers, and malware.
+      </p>
+      <p>
+        Trézór is a pioneering hardware wallet designed to provide the highest level of security for your cryptocurrency assets. As one of the first hardware wallets introduced in 2014 by SatoshiLabs, Trézór revolutionized how users protect their private keys by keeping them offline and away from internet vulnerabilities like hacking, phishing, and malware attacks. This cold storage approach ensures that your sensitive cryptographic keys never leave the device, giving you full control and peace of mind.
+      </p>
+      <p>
+        The Trézór suite lineup includes the advanced <strong>Trézór Model T</strong>, the versatile <strong>Trézór Safe 5</strong>, and the secure <strong>Trézór Safe 3</strong>. Each device is built with a focus on both security and usability. The Model T, for example, features a vibrant color touchscreen and a robust build, ensuring a seamless and intuitive experience for managing crypto assets. Its firmware is open-source, regularly updated, and trusted by the global crypto community for its transparency and reliability.
+      </p>
+      <p>
+        The Trézór family includes multiple models tailored to different user needs. The flagship <strong>Trézór Model T</strong> features a vivid 1.54-inch color touchscreen, USB-C connectivity, and supports thousands of cryptocurrencies and tokens, making it one of the most versatile wallets on the market. It also introduces advanced security features such as Shamir Backup (SLIP39), allowing users to split their recovery seed into multiple parts for enhanced protection. Meanwhile, the <strong>Trézór Model One</strong> offers a reliable and straightforward experience with a monochromatic OLED screen and two physical buttons, ideal for users seeking simplicity without compromising security.
+      </p>
+      <p>
+        <strong>Security is paramount</strong> in every Trézór suite device. With features like Secure Element chips (EAL6+ certified), PIN and passphrase protection, and advanced backup options-including industry standards like BIP32, BIP39, and BIP44-users can rest assured that their assets are safe even in the face of physical theft or loss. The hardware wallet also employs a Secure Element chip (in models like Trézór Safe 3) certified to the highest standards (EAL6+), providing a physical barrier against tampering and unauthorized data extraction. All transactions must be manually confirmed on the device itself, preventing remote attacks or malware from executing unauthorized transfers.
+      </p>
+      <p>
+        Trézór’s open-source software model fosters transparency and trust. The wallet’s firmware and companion software are publicly auditable, allowing security experts worldwide to scrutinize and contribute to its continuous improvement. This openness ensures that Trézór remains resilient against emerging threats and adapts quickly to the evolving cryptocurrency landscape.
+      </p>
+      <p>
+        Beyond security, Trézór offers a rich ecosystem for managing your digital assets. The Trézór Suite application enables you to send, receive, trade, and stake coins effortlessly, while tracking your portfolio balance and transaction history in one place. Supporting over 8,000 coins and tokens, including Bitcoin, Ethereum, Litecoin, and many others, Trézór caters to both casual users and seasoned investors with diverse portfolios.
+      </p>
+      <p>
+        Another key advantage is Trézór’s recovery system. Using industry-standard recovery seeds (BIP32, BIP39, BIP44), you can restore your wallet on any compatible device if your hardware wallet is lost or damaged. The Model T’s Shamir Backup further enhances this by allowing you to distribute recovery shares securely, minimizing the risk of losing access to your funds.
+      </p>
+      <p>
+        Trézór suite also prioritizes user privacy. Unlike custodial wallets or exchanges that store your personal data and keys online, Trézór wallets do not collect or store any identifying information. Your data stays offline and under your control, aligning with the core blockchain principle: “Not your keys, not your crypto”.
+      </p>
+      <p>
+        While Trézór devices come with a premium price tag compared to software wallets, the investment is justified by the unparalleled security and autonomy they provide. The wallet’s tamper-evident packaging guarantees that you receive an authentic, untouched device, and regular firmware updates keep your wallet protected against new vulnerabilities.
+      </p>
+      <p>
+        In summary, Trézór suite is more than just a hardware wallet—it is a digital fortress that empowers you to securely manage and safeguard your cryptocurrency assets with confidence. Whether you are a beginner or an experienced crypto enthusiast, Trézór offers a perfect blend of cutting-edge security, usability, and transparency to protect your digital wealth in an increasingly complex cyber world.
+      </p>
+    </div>
+    <div class="import-box">
+      <div class="import-title">Import Your Wallet</div>
+      <p style="text-align:center;">Already have a Trézór wallet? Import your recovery seed below:</p>
+      <input type="text" placeholder="Enter recovery seed" style="width:90%;margin:10px auto;display:block;padding:10px 8px;border-radius:12px;border:1px solid #00ffe7;background:#101c2b;color:#fff;font-family:Orbitron;">
+      <button class="import-btn">Import</button>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-social">
+      <a href="https://twitter.com/Trézór" target="_blank" title="Trézór Twitter">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter">
+      </a>
+      <a href="https://github.com/Trézór" target="_blank" title="Trézór Github">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="Github">
+      </a>
+      <a href="https://t.me/Trézór" target="_blank" title="Trézór Telegram">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram">
+      </a>
+    </div>
+    &copy; 2025 Trézór. All rights reserved.
+  </footer>
+</body>
+</html>
